@@ -15,14 +15,17 @@ struct V_Timer: View {
     
     @ViewBuilder
     var body: some View {
-        if timerManager.time.state == .inBreak {
+        switch timerManager.time.state {
+        case .beforeWorking:
+            startNextRoundView
+        case .inBreak:
             breakTimeRemainingView
                 .onAppear() {
                     if let window = NSApplication.shared.windows.last {
                         window.deminiaturize(nil)
                     }
                 }
-        } else {
+        case .working:
             screenTimeRemainingView
                 .onAppear {
                     if let window = NSApplication.shared.windows.last {

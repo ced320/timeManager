@@ -11,7 +11,7 @@ class TimerManager: ObservableObject {
     @Published var time: Time
     
     init() {
-        self.time = Time(state: .working)
+        self.time = Time(state: .beforeWorking)
     }
     
 
@@ -32,7 +32,7 @@ class TimerManager: ObservableObject {
         case .inBreak:
             if time.remainingBreakTime <= 0 {
                 time.remainingBreakTime = time.breakTime
-                time.state = .working
+                time.state = .beforeWorking
             }
         case .working:
             if time.remainingScreenTime <= 0 {
