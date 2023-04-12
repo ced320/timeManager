@@ -11,7 +11,7 @@ struct V_Timer: View {
     
     @EnvironmentObject var timerManager: TimerManager
     
-    let timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
+    let timer = Timer.publish(every: 60, on: .main, in: .common).autoconnect()
     let window = NSApplication.shared.windows.last
     
     
@@ -23,17 +23,13 @@ struct V_Timer: View {
         case .inBreak:
             breakTimeRemainingView
                 .onAppear() {
-                    if let window {
-                        window.deminiaturize(nil)
-                    }
+                        window?.deminiaturize(nil)
                 }
         case .working:
             screenTimeRemainingView
                 .onAppear {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.75) {
-                        if let window {
-                            window.miniaturize(nil)
-                        }
+                            window?.miniaturize(nil)
                     }
                 }
         }
