@@ -11,7 +11,7 @@ struct V_Timer: View {
     
     @EnvironmentObject var timerManager: TimerManager
     
-    let timer = Timer.publish(every: 60, on: .main, in: .common).autoconnect()
+    let timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
     
     
     var body: some View {
