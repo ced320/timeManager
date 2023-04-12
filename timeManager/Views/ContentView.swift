@@ -11,9 +11,6 @@ struct ContentView: View {
     
     @EnvironmentObject var timerManager: TimerManager
     
-   
-    
-    
     var body: some View {
         V_Timer()
             .environmentObject(timerManager)

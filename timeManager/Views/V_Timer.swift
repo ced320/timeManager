@@ -13,11 +13,25 @@ struct V_Timer: View {
     
     let timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
     
-    
+    @ViewBuilder
     var body: some View {
+        timerManager.time.isBreak ? AnyView(breakTimeRemainingView) : AnyView(screenTimeRemainingView)
+    }
+    
+    var screenTimeRemainingView: some View {
         VStack {
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            Text("Currently working")
             Text("\(timerManager.time.remainingScreenTime)")
+                .onReceive(timer) { time in
+                    timerManager.countDownTimer(byMinutes: 1)
+                }
+        }
+    }
+    
+    var breakTimeRemainingView: some View {
+        VStack {
+            Text("Make a break for: ")
+            Text("\(timerManager.time.remainingBreakTime)")
                 .onReceive(timer) { time in
                     timerManager.countDownTimer(byMinutes: 1)
                 }
