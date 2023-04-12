@@ -12,6 +12,8 @@ struct V_Timer: View {
     @EnvironmentObject var timerManager: TimerManager
     
     let timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
+    let window = NSApplication.shared.windows.last
+    
     
     @ViewBuilder
     var body: some View {
@@ -21,27 +23,33 @@ struct V_Timer: View {
         case .inBreak:
             breakTimeRemainingView
                 .onAppear() {
-                    if let window = NSApplication.shared.windows.last {
+                    if let window {
                         window.deminiaturize(nil)
                     }
                 }
         case .working:
             screenTimeRemainingView
                 .onAppear {
-                    if let window = NSApplication.shared.windows.last {
-                        window.miniaturize(nil)
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.75) {
+                        if let window {
+                            window.miniaturize(nil)
+                        }
                     }
                 }
         }
     }
     
     var screenTimeRemainingView: some View {
-        VStack {
-            Text("Currently working")
-            Text("\(timerManager.time.remainingScreenTime)")
-                .onReceive(timer) { time in
-                    timerManager.countDownTimer(byMinutes: 1)
-                }
+        ZStack {
+            Color.green
+                .ignoresSafeArea()
+            VStack {
+                Text("Currently working")
+                Text("\(timerManager.time.remainingScreenTime)")
+                    .onReceive(timer) { time in
+                        timerManager.countDownTimer(byMinutes: 1)
+                    }
+            }
         }
     }
     
@@ -62,7 +70,7 @@ struct V_Timer: View {
     var startNextRoundView: some View {
         VStack {
             Spacer()
-            Text("Exercise Timer")
+            Text("Screen Timer")
                 .font(.title)
             Spacer()
             Image(systemName: "play.circle.fill")
@@ -76,7 +84,7 @@ struct V_Timer: View {
                     }
                 }
             Spacer()
-            Text("Press button to start Training")
+            Text("Press button to start working")
                 .font(.footnote)
             Spacer()
         }.padding()
