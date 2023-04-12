@@ -1,0 +1,617 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9089175429E6AFE400B667A8 /* timeManagerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9089175329E6AFE400B667A8 /* timeManagerApp.swift */; };
+		9089175629E6AFE400B667A8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9089175529E6AFE400B667A8 /* ContentView.swift */; };
+		9089175829E6AFE600B667A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9089175729E6AFE600B667A8 /* Assets.xcassets */; };
+		9089175B29E6AFE600B667A8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9089175A29E6AFE600B667A8 /* Preview Assets.xcassets */; };
+		9089176629E6AFE600B667A8 /* timeManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9089176529E6AFE600B667A8 /* timeManagerTests.swift */; };
+		9089177029E6AFE600B667A8 /* timeManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9089176F29E6AFE600B667A8 /* timeManagerUITests.swift */; };
+		9089177229E6AFE600B667A8 /* timeManagerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9089177129E6AFE600B667A8 /* timeManagerUITestsLaunchTests.swift */; };
+		9089178229E6B23E00B667A8 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9089178129E6B23E00B667A8 /* Time.swift */; };
+		9089178429E6B2D900B667A8 /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9089178329E6B2D900B667A8 /* TimerManager.swift */; };
+		9089178629E6B9B900B667A8 /* V_Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9089178529E6B9B900B667A8 /* V_Timer.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9089176229E6AFE600B667A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9089174829E6AFE400B667A8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9089174F29E6AFE400B667A8;
+			remoteInfo = timeManager;
+		};
+		9089176C29E6AFE600B667A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9089174829E6AFE400B667A8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9089174F29E6AFE400B667A8;
+			remoteInfo = timeManager;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9089175029E6AFE400B667A8 /* timeManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = timeManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9089175329E6AFE400B667A8 /* timeManagerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timeManagerApp.swift; sourceTree = "<group>"; };
+		9089175529E6AFE400B667A8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9089175729E6AFE600B667A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9089175A29E6AFE600B667A8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9089175C29E6AFE600B667A8 /* timeManager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = timeManager.entitlements; sourceTree = "<group>"; };
+		9089176129E6AFE600B667A8 /* timeManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = timeManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9089176529E6AFE600B667A8 /* timeManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timeManagerTests.swift; sourceTree = "<group>"; };
+		9089176B29E6AFE600B667A8 /* timeManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = timeManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9089176F29E6AFE600B667A8 /* timeManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timeManagerUITests.swift; sourceTree = "<group>"; };
+		9089177129E6AFE600B667A8 /* timeManagerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timeManagerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9089178129E6B23E00B667A8 /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
+		9089178329E6B2D900B667A8 /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
+		9089178529E6B9B900B667A8 /* V_Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V_Timer.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9089174D29E6AFE400B667A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9089175E29E6AFE600B667A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9089176829E6AFE600B667A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9089174729E6AFE400B667A8 = {
+			isa = PBXGroup;
+			children = (
+				9089175229E6AFE400B667A8 /* timeManager */,
+				9089176429E6AFE600B667A8 /* timeManagerTests */,
+				9089176E29E6AFE600B667A8 /* timeManagerUITests */,
+				9089175129E6AFE400B667A8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9089175129E6AFE400B667A8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9089175029E6AFE400B667A8 /* timeManager.app */,
+				9089176129E6AFE600B667A8 /* timeManagerTests.xctest */,
+				9089176B29E6AFE600B667A8 /* timeManagerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9089175229E6AFE400B667A8 /* timeManager */ = {
+			isa = PBXGroup;
+			children = (
+				9089177F29E6B04300B667A8 /* Models */,
+				9089178029E6B05300B667A8 /* ModelViewControler */,
+				9089177E29E6B03900B667A8 /* Views */,
+				9089175329E6AFE400B667A8 /* timeManagerApp.swift */,
+				9089175729E6AFE600B667A8 /* Assets.xcassets */,
+				9089175C29E6AFE600B667A8 /* timeManager.entitlements */,
+				9089175929E6AFE600B667A8 /* Preview Content */,
+			);
+			path = timeManager;
+			sourceTree = "<group>";
+		};
+		9089175929E6AFE600B667A8 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				9089175A29E6AFE600B667A8 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9089176429E6AFE600B667A8 /* timeManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				9089176529E6AFE600B667A8 /* timeManagerTests.swift */,
+			);
+			path = timeManagerTests;
+			sourceTree = "<group>";
+		};
+		9089176E29E6AFE600B667A8 /* timeManagerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9089176F29E6AFE600B667A8 /* timeManagerUITests.swift */,
+				9089177129E6AFE600B667A8 /* timeManagerUITestsLaunchTests.swift */,
+			);
+			path = timeManagerUITests;
+			sourceTree = "<group>";
+		};
+		9089177E29E6B03900B667A8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9089175529E6AFE400B667A8 /* ContentView.swift */,
+				9089178529E6B9B900B667A8 /* V_Timer.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9089177F29E6B04300B667A8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9089178129E6B23E00B667A8 /* Time.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9089178029E6B05300B667A8 /* ModelViewControler */ = {
+			isa = PBXGroup;
+			children = (
+				9089178329E6B2D900B667A8 /* TimerManager.swift */,
+			);
+			path = ModelViewControler;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9089174F29E6AFE400B667A8 /* timeManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9089177529E6AFE600B667A8 /* Build configuration list for PBXNativeTarget "timeManager" */;
+			buildPhases = (
+				9089174C29E6AFE400B667A8 /* Sources */,
+				9089174D29E6AFE400B667A8 /* Frameworks */,
+				9089174E29E6AFE400B667A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = timeManager;
+			productName = timeManager;
+			productReference = 9089175029E6AFE400B667A8 /* timeManager.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9089176029E6AFE600B667A8 /* timeManagerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9089177829E6AFE600B667A8 /* Build configuration list for PBXNativeTarget "timeManagerTests" */;
+			buildPhases = (
+				9089175D29E6AFE600B667A8 /* Sources */,
+				9089175E29E6AFE600B667A8 /* Frameworks */,
+				9089175F29E6AFE600B667A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9089176329E6AFE600B667A8 /* PBXTargetDependency */,
+			);
+			name = timeManagerTests;
+			productName = timeManagerTests;
+			productReference = 9089176129E6AFE600B667A8 /* timeManagerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9089176A29E6AFE600B667A8 /* timeManagerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9089177B29E6AFE600B667A8 /* Build configuration list for PBXNativeTarget "timeManagerUITests" */;
+			buildPhases = (
+				9089176729E6AFE600B667A8 /* Sources */,
+				9089176829E6AFE600B667A8 /* Frameworks */,
+				9089176929E6AFE600B667A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9089176D29E6AFE600B667A8 /* PBXTargetDependency */,
+			);
+			name = timeManagerUITests;
+			productName = timeManagerUITests;
+			productReference = 9089176B29E6AFE600B667A8 /* timeManagerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9089174829E6AFE400B667A8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					9089174F29E6AFE400B667A8 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					9089176029E6AFE600B667A8 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 9089174F29E6AFE400B667A8;
+					};
+					9089176A29E6AFE600B667A8 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 9089174F29E6AFE400B667A8;
+					};
+				};
+			};
+			buildConfigurationList = 9089174B29E6AFE400B667A8 /* Build configuration list for PBXProject "timeManager" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9089174729E6AFE400B667A8;
+			productRefGroup = 9089175129E6AFE400B667A8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9089174F29E6AFE400B667A8 /* timeManager */,
+				9089176029E6AFE600B667A8 /* timeManagerTests */,
+				9089176A29E6AFE600B667A8 /* timeManagerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9089174E29E6AFE400B667A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9089175B29E6AFE600B667A8 /* Preview Assets.xcassets in Resources */,
+				9089175829E6AFE600B667A8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9089175F29E6AFE600B667A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9089176929E6AFE600B667A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9089174C29E6AFE400B667A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9089178229E6B23E00B667A8 /* Time.swift in Sources */,
+				9089178429E6B2D900B667A8 /* TimerManager.swift in Sources */,
+				9089175629E6AFE400B667A8 /* ContentView.swift in Sources */,
+				9089178629E6B9B900B667A8 /* V_Timer.swift in Sources */,
+				9089175429E6AFE400B667A8 /* timeManagerApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9089175D29E6AFE600B667A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9089176629E6AFE600B667A8 /* timeManagerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9089176729E6AFE600B667A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9089177029E6AFE600B667A8 /* timeManagerUITests.swift in Sources */,
+				9089177229E6AFE600B667A8 /* timeManagerUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9089176329E6AFE600B667A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9089174F29E6AFE400B667A8 /* timeManager */;
+			targetProxy = 9089176229E6AFE600B667A8 /* PBXContainerItemProxy */;
+		};
+		9089176D29E6AFE600B667A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9089174F29E6AFE400B667A8 /* timeManager */;
+			targetProxy = 9089176C29E6AFE600B667A8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		9089177329E6AFE600B667A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9089177429E6AFE600B667A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		9089177629E6AFE600B667A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = timeManager/timeManager.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"timeManager/Preview Content\"";
+				DEVELOPMENT_TEAM = 285F7C475A;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "frimmel-hoffmann.cedric.timeManager";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		9089177729E6AFE600B667A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = timeManager/timeManager.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"timeManager/Preview Content\"";
+				DEVELOPMENT_TEAM = 285F7C475A;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "frimmel-hoffmann.cedric.timeManager";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		9089177929E6AFE600B667A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 285F7C475A;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "frimmel-hoffmann.cedric.timeManagerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/timeManager.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/timeManager";
+			};
+			name = Debug;
+		};
+		9089177A29E6AFE600B667A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 285F7C475A;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "frimmel-hoffmann.cedric.timeManagerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/timeManager.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/timeManager";
+			};
+			name = Release;
+		};
+		9089177C29E6AFE600B667A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 285F7C475A;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "frimmel-hoffmann.cedric.timeManagerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = timeManager;
+			};
+			name = Debug;
+		};
+		9089177D29E6AFE600B667A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 285F7C475A;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "frimmel-hoffmann.cedric.timeManagerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = timeManager;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9089174B29E6AFE400B667A8 /* Build configuration list for PBXProject "timeManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9089177329E6AFE600B667A8 /* Debug */,
+				9089177429E6AFE600B667A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9089177529E6AFE600B667A8 /* Build configuration list for PBXNativeTarget "timeManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9089177629E6AFE600B667A8 /* Debug */,
+				9089177729E6AFE600B667A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9089177829E6AFE600B667A8 /* Build configuration list for PBXNativeTarget "timeManagerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9089177929E6AFE600B667A8 /* Debug */,
+				9089177A29E6AFE600B667A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9089177B29E6AFE600B667A8 /* Build configuration list for PBXNativeTarget "timeManagerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9089177C29E6AFE600B667A8 /* Debug */,
+				9089177D29E6AFE600B667A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9089174829E6AFE400B667A8 /* Project object */;
+}
