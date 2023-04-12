@@ -15,7 +15,21 @@ struct V_Timer: View {
     
     @ViewBuilder
     var body: some View {
-        timerManager.time.isBreak ? AnyView(breakTimeRemainingView) : AnyView(screenTimeRemainingView)
+        if timerManager.time.isBreak {
+            breakTimeRemainingView
+                .onAppear() {
+                    if let window = NSApplication.shared.windows.last {
+                        window.deminiaturize(nil)
+                    }
+                }
+        } else {
+            screenTimeRemainingView
+                .onAppear {
+                    if let window = NSApplication.shared.windows.last {
+                        window.miniaturize(nil)
+                    }
+                }
+        }
     }
     
     var screenTimeRemainingView: some View {
@@ -29,12 +43,16 @@ struct V_Timer: View {
     }
     
     var breakTimeRemainingView: some View {
-        VStack {
-            Text("Make a break for: ")
-            Text("\(timerManager.time.remainingBreakTime)")
-                .onReceive(timer) { time in
-                    timerManager.countDownTimer(byMinutes: 1)
-                }
+        ZStack {
+            Color.purple
+                .ignoresSafeArea()
+            VStack {
+                Text("Make a break for: ")
+                Text("\(timerManager.time.remainingBreakTime)")
+                    .onReceive(timer) { time in
+                        timerManager.countDownTimer(byMinutes: 1)
+                    }
+            }
         }
     }
 }
