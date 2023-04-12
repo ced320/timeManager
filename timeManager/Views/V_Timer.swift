@@ -15,7 +15,7 @@ struct V_Timer: View {
     
     @ViewBuilder
     var body: some View {
-        if timerManager.time.isBreak {
+        if timerManager.time.state == .inBreak {
             breakTimeRemainingView
                 .onAppear() {
                     if let window = NSApplication.shared.windows.last {
@@ -44,7 +44,7 @@ struct V_Timer: View {
     
     var breakTimeRemainingView: some View {
         ZStack {
-            Color.purple
+            Color.red
                 .ignoresSafeArea()
             VStack {
                 Text("Make a break for: ")
@@ -54,6 +54,29 @@ struct V_Timer: View {
                     }
             }
         }
+    }
+    
+    var startNextRoundView: some View {
+        VStack {
+            Spacer()
+            Text("Exercise Timer")
+                .font(.title)
+            Spacer()
+            Image(systemName: "play.circle.fill")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 180, height: 180)
+                .foregroundColor(.cyan)
+                .onTapGesture {
+                    withAnimation {
+                        timerManager.time.state = .working
+                    }
+                }
+            Spacer()
+            Text("Press button to start Training")
+                .font(.footnote)
+            Spacer()
+        }.padding()
     }
 }
 

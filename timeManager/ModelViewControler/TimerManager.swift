@@ -11,24 +11,36 @@ class TimerManager: ObservableObject {
     @Published var time: Time
     
     init() {
-        self.time = Time(isBreak: false)
+        self.time = Time(state: .working)
     }
     
+
     private func reduceRemainingTime(byMinutes minutes: Int) {
-        if time.isBreak {
+        switch time.state {
+        case .inBreak:
             time.remainingBreakTime -= minutes
-        } else {
+        case .working:
             time.remainingScreenTime -= minutes
+        default:
+            break
         }
     }
     
+    
     private func checkForSwitch() {
-        if time.isBreak && time.remainingBreakTime <= 0 {
-            time.isBreak.toggle()
-            time.remainingBreakTime = time.breakTime
-        } else if !time.isBreak && time.remainingScreenTime <= 0 {
-            time.isBreak.toggle()
-            time.remainingScreenTime = time.screenTime
+        switch time.state {
+        case .inBreak:
+            if time.remainingBreakTime <= 0 {
+                time.remainingBreakTime = time.breakTime
+                time.state = .working
+            }
+        case .working:
+            if time.remainingScreenTime <= 0 {
+                time.remainingScreenTime = time.screenTime
+                time.state = .inBreak
+            }
+        default:
+            break
         }
     }
     
